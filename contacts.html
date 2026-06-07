@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Jane Doe Engineering Portfolio</title>
+  <meta name="description" content="Get in touch with Jane Doe for front-end architecture consulting, speaking engagements, or engineering roles.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html" aria-label="Jane Doe Portfolio Home">Jane Doe</a>
+    </div>
+    <nav aria-label="Main Site Navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section aria-labelledby="contact-heading" class="contact-section">
+      <h1 id="contact-heading">Get in Touch</h1>
+      <p>Have a project in mind or want to talk frontend accessibility? Drop a message below.</p>
+
+      <form action="#" method="POST" class="accessible-form" novalidate>
+        
+        <div class="form-group">
+          <label for="user-name">Full Name <span class="required" aria-hidden="true">*</span></label>
+          <input 
+            type="text" 
+            id="user-name" 
+            name="name" 
+            required 
+            autocomplete="name"
+            aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="user-email">Email Address <span class="required" aria-hidden="true">*</span></label>
+          <input 
+            type="email" 
+            id="user-email" 
+            name="email" 
+            required 
+            autocomplete="email"
+            aria-required="true"
+            aria-describedby="email-hint">
+          <small id="email-hint" class="form-hint">Format must resemble name@domain.com</small>
+        </div>
+
+        <div class="form-group">
+          <label for="user-message">Your Message <span class="required" aria-hidden="true">*</span></label>
+          <textarea 
+            id="user-message" 
+            name="message" 
+            rows="6" 
+            required 
+            aria-required="true"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Jane Doe. Built with strict semantic standards.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Jane Doe Engineering Portfolio</title>
+  <meta name="description" content="Explore production-grade frontend architecture projects designed with WCAG accessibility principles.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html" aria-label="Jane Doe Portfolio Home">Jane Doe</a>
+    </div>
+    <nav aria-label="Main Site Navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html" aria-current="page">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section aria-labelledby="projects-heading" class="projects-section">
+      <h1 id="projects-heading">Selected Engineering Work</h1>
+      <p class="section-intro">All digital products detailed below are built from the ground up to support screen readers, keyboard-only access, and semantic layout patterns.</p>
+      
+      <div class="project-grid">
+        <article class="project-card">
+          <header class="project-header">
+            <h3>Accessible E-Commerce Platform</h3>
+            <p class="project-meta">Tech Stack: HTML5, CSS Grid, Vanilla JS</p>
+          </header>
+          <div class="project-body">
+            <p>A fully WCAG 2.2 AA compliant storefront architecture featuring custom accessible modal alerts, active aria-live announcements, and strict keyboard trapping mechanics.</p>
+          </div>
+          <footer class="project-footer">
+            <a href="#" aria-label="View Accessible E-Commerce Platform source code on GitHub">View Source</a>
+            <a href="#" class="btn-live" aria-label="Launch live demo of Accessible E-Commerce Platform">Live Demo</a>
+          </footer>
+        </article>
+
+        <article class="project-card">
+          <header class="project-header">
+            <h3>Data Visualization Dashboard</h3>
+            <p class="project-meta">Tech Stack: SVG, Semantic Markup, CSS Custom Properties</p>
+          </header>
+          <div class="project-body">
+            <p>An interactive operations dashboard displaying real-time metrics with text-alternative data tables structured cleanly for assistive technology users.</p>
+          </div>
+          <footer class="project-footer">
+            <a href="#" aria-label="View Data Visualization Dashboard source code on GitHub">View Source</a>
+            <a href="#" class="btn-live" aria-label="Launch live demo of Data Visualization Dashboard">Live Demo</a>
+          </footer>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Jane Doe. Built with strict semantic standards.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

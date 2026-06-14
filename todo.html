@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager | Jane Doe Engineering Portfolio</title>
+  <meta name="description" content="An interactive, state-driven, accessible To-Do List application featuring localized state storage.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html" aria-label="Jane Doe Portfolio Home">Jane Doe</a>
+    </div>
+    <nav aria-label="Main Site Navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="todo.html" aria-current="page">Task App</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section aria-labelledby="todo-heading" class="todo-app-container">
+      <h1 id="todo-heading">State-Driven Task Manager</h1>
+      <p>Manage your daily deliverables. All entries persist locally within your browser cache.</p>
+
+      <form id="todo-form" class="accessible-form" novalidate>
+        <div class="form-group">
+          <label for="todo-input">New Task Description <span class="required" aria-hidden="true">*</span></label>
+          <div class="input-action-group" style="display: flex; gap: 1rem; width: 100%;">
+            <input 
+              type="text" 
+              id="todo-input" 
+              required 
+              placeholder="e.g., Audit project layout variables" 
+              style="flex-grow: 1;">
+            <button type="submit" class="cta-button" style="margin: 0; padding: 0 1.5rem;">Add Task</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="filter-controls" style="display: flex; gap: 1rem; margin: 2rem 0; flex-wrap: wrap;">
+        <button class="cta-button filter-btn active" data-filter="all" aria-pressed="true">All Tasks</button>
+        <button class="cta-button filter-btn" data-filter="active" aria-pressed="false">Active</button>
+        <button class="cta-button filter-btn" data-filter="completed" aria-pressed="false">Completed</button>
+      </div>
+
+      <div id="todo-status" class="visually-hidden" aria-live="polite" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;"></div>
+
+      <ul id="todo-list" class="project-grid" style="grid-template-columns: 1fr; list-style: none; margin-top: 1rem; gap: 1rem;">
+        </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Jane Doe. State-driven assignment logic.</p>
+    </div>
+  </footer>
+
+  <script src="todo.js"></script>
+</body>
+</html>

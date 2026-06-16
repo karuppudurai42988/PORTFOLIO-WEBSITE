@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Weather Dashboard | Jane Doe Portfolio</title>
+  <meta name="description" content="A real-time weather tracking application fetching and rendering live metrics from a public REST API.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html" aria-label="Jane Doe Portfolio Home">Jane Doe</a>
+    </div>
+    <nav aria-label="Main Site Navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="todo.html">Task App</a></li>
+        <li><a href="weather.html" aria-current="page">Weather App</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section aria-labelledby="weather-heading">
+      <h1 id="weather-heading">Asynchronous Weather Dashboard</h1>
+      <p>Enter a city name below to pull real-time environmental metrics directly via async fetch streams.</p>
+
+      <form id="weather-form" class="accessible-form" style="max-width: 500px; margin-bottom: 3rem;" novalidate>
+        <div class="form-group">
+          <label for="city-input">Search Location By City <span class="required" aria-hidden="true">*</span></label>
+          <div style="display: flex; gap: 1rem; width: 100%;">
+            <input 
+              type="text" 
+              id="city-input" 
+              required 
+              placeholder="e.g., London, Tokyo, New York" 
+              style="flex-grow: 1;">
+            <button type="submit" class="cta-button" style="margin: 0; padding: 0 1.5rem;">Fetch Weather</button>
+          </div>
+        </div>
+      </form>
+
+      <div id="weather-status" aria-live="polite" style="font-weight: 600; margin-bottom: 1.5rem;"></div>
+
+      <div id="weather-display" class="project-grid" style="display: none;">
+        
+        <article class="project-card">
+          <header>
+            <p class="project-meta">Current State</p>
+            <h3>Temperature & Conditions</h3>
+          </header>
+          <div class="project-body" style="margin-top: 1rem;">
+            <p id="info-temp" style="font-size: 2.5rem; font-weight: 800; color: var(--accent-primary); line-height: 1;">--</p>
+            <p id="info-desc" style="font-size: 1.15rem; font-weight: 600; margin-top: 0.5rem;">--</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <header>
+            <p class="project-meta">Atmospheric Variables</p>
+            <h3>Humidity & Wind Scales</h3>
+          </header>
+          <div class="project-body" style="margin-top: 1rem; display: grid; gap: 0.75rem;">
+            <p><strong>Humidity Index:</strong> <span id="info-humidity">--</span></p>
+            <p><strong>Wind Speed velocity:</strong> <span id="info-wind">--</span></p>
+            <p><strong>Location Confirmed:</strong> <span id="info-location" style="color: var(--accent-primary); font-weight:700;">--</span></p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Jane Doe. REST API & Async/Await assignment logic.</p>
+    </div>
+  </footer>
+
+  <script src="weather.js"></script>
+</body>
+</html>
